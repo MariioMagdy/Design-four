@@ -1,0 +1,615 @@
+body{
+    background-color: #f5f5f5;
+}
+
+#loader-wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+#loader::before{
+  content: "";
+  position: absolute;
+  top:05px;
+  left: 05px;
+  right:05px;
+  bottom: 05px;
+  border-radius: 50%;
+  border: 03px solid transparent;
+  border-top-color:#0891FA;
+  animation: spin 3s linear infinite;
+
+}
+
+#loader::after{
+  content: "";
+  position: absolute;
+  top:15px;
+  left: 15px;
+  right:15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 03px solid transparent;
+  border-top-color: #0074FF;
+  animation: spin 3s linear infinite;
+
+}
+
+#loader{
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  margin: -25px 0 0 -25px;
+  border-radius: 50%;
+  border:03px solid transparent;
+  border-top-color: #0F66BC;
+  animation: spin 2s linear infinite;
+  z-index: 1001;
+}
+#loader-wrapper .loader-section{
+  position: fixed;
+  top:0;
+  width: 51%;
+  height: 100%;
+  background-color:white;
+  z-index: 1000;
+}
+
+#loader-wrapper .loader-section.section-left{
+  left:0;
+}
+#loader-wrapper .loader-section.section-right{
+  right:0;
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+  30%{
+    transform: rotate(180deg);
+    border-top-color:white;
+  }
+  40%{
+    transform: rotate(180deg);
+    border-top-color:green;
+  }
+  50%{
+    transform: rotate(180deg);
+    border-top-color:green;
+  }  
+
+  60%{
+    transform: rotate(180deg);
+    border-top-color:green;
+  }  
+  70%{
+    transform: rotate(180deg);
+    border-top-color:green;
+  }  
+
+  100%{
+    transform: rotate(360deg);
+    
+  }
+}
+
+.loaded #loader-wrapper .loader-section.section-left{
+  transform: translateX(-100%);
+  -webkit-transition: all 0.8s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+          transition: all 0.8s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+
+}
+.loaded #loader-wrapper .loader-section.section-right{
+  transform: translateX(100%);
+  -webkit-transition: all 0.8s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+          transition: all 0.8s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+
+}
+
+.loader #loader {
+
+  opacity: 0;
+    -webkit-transition: all 0.3s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+            transition: all 0.3s ease-out;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+  
+  
+}
+
+.loaded #loader-wrapper{
+  visibility: hidden;
+  transform: rotate(40deg) scale(1.8);
+  -webkit-transition: all 0.4s  ease;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+          transition: all 0.4s  ease-out;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+}
+
+
+.home-page{
+    background-image: url(../images/intro-bg.jpg);
+    background-size: cover;
+    background-attachment:fixed;
+    background-position: center;
+    height: 100vh;
+    align-items: center;
+    
+}
+.layover{
+    background-color: rgba(0,0,0,.5);
+    background-size: cover;
+    background-attachment:fixed;
+    background-position: center;
+    height: 100vh;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.navbar {
+    font-weight: 600;
+    color:white !important;
+    
+}
+
+.bg{
+  background-color: black;
+  z-index:1;
+}
+
+.navbar a{
+    margin-right: 10px;
+    color:white !important;
+    margin-left: 07px;
+    position: relative;
+}
+
+.navbar a:after{
+    content: "";
+
+    position: absolute;
+    
+    height: 2px;
+    
+    width: 0;
+    
+    background: white;
+    
+    bottom: 0;
+    
+    left: 9px;
+    transition: .5s;
+}
+
+a:hover::after {
+width: 35px;
+
+}
+
+.hom:hover::after {
+    width: 0px;  
+    }
+
+.always-active a:after {
+    height: 2px;
+    width: 35px;    
+    background: white;
+    bottom: 0;
+    left: 9px;
+}
+.blue-line{
+  height: 03px;
+}
+
+.sm-blue-line{
+  height: 04px;
+  margin: 0 auto;
+  width: 4%;
+}
+.blog .col-md-3,.col-md-5,.col-md-4{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.blog .Name{
+  font-size:1rem;
+}
+.ser{
+  border-radius: 1em;
+
+}
+.fa-desktop,.fa-code,.fa-camera,.fa-mobile,.fa-broom,.fa-chart-bar{
+  font-size: 3rem;
+  border: 10px solid #0078ff;
+}
+
+.fa-mobile,.fa-code{
+width: 127px
+}
+
+.caption h1 {
+
+    color: white;
+    font-weight: 600;
+}
+
+.progress{
+  border-radius: 0;
+}
+
+.paragraph{
+  font-size: 1.25rem;
+  font-weight: 300
+}
+
+.s-weight{
+  font-weight: 600;
+}
+
+.animate{
+    color:white;
+    font-weight: 900;
+}
+.animate:after{
+    content:"";
+    font-weight: 400;
+    border-right: 02px solid #fff;
+    margin: 0 auto ;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter-text 9s ease 1s infinite,
+               blinking-cursor .9s ease infinite;
+    animation-fill-mode: forwards;   
+}
+.achievements{
+  background-image: url(../images/post-3.jpg);
+  background-size: cover;
+  background-attachment:fixed;
+  background-position: center center;
+ 
+  align-items: center;
+ 
+}
+.overlay{
+  background-color:rgba(0,120,255,.8);
+  background-size: cover;
+  background-attachment:fixed;
+  background-position: center center;
+ 
+}
+.ach{
+color:  white;
+height: 50vh;
+}
+.ach-i{
+  font-size: 1.5rem;
+  border: 10px solid #cde1f8;
+}
+
+.fa-calendar,.fa-users,.fa-award{
+  width: 78px;
+  height: 76px;
+}
+.feedback{
+  background-image:url(../images/overlay-bg.jpg);
+  background-size: cover;
+  background-attachment:fixed;
+  background-position: center center;
+  height: 100vh;
+}
+.contact-us{
+  background-image:url(../images/overlay-bg.jpg);
+  background-size: cover;
+  background-attachment:fixed;
+  background-position: center center;
+ 
+}
+
+.s-f{
+  font-size: 03rem !important;
+}
+.services .container i{
+  transition: .5s;
+}
+.services .container i:hover{
+  border-color:#cde1f8;
+  color:white;
+  background-color: #0078ff;
+}
+.layover-three,.four{
+  background-color: rgba(0,120,255,.7);
+  background-size: cover;
+  background-attachment:fixed;
+  background-position: center center;
+
+  width: 100%;
+}
+.fb{
+    height: 100vh;
+}
+.Portfolio h3{
+  font-size: 3rem;
+}
+
+
+.Portfolio .container .card{
+box-shadow: 0px 3px 4px gray;
+}
+
+.Portfolio .container .card h6{
+  font-size: 0.9rem;
+}
+.img-hidden{
+  overflow: hidden;
+}
+.Portfolio .container a img{
+  transition: .7s;
+}
+
+.Portfolio .container a:hover img{
+  transform: scale(1.2);
+}
+.mini{
+  background-color: #f7f7f7;
+  border: .1rem solid #dfdfdf;
+  border-radius: .1rem;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.mini img{
+  width: 30px;
+  height: 30px;
+  margin-top: 7px;
+}
+
+.mini i{
+  font-size: 14px;
+}
+
+.footer-icons a:hover i{
+  border-color:#cde1f8;
+  color:white;
+  background-color: #0078ff;
+}
+.rd{
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.fa-clock{
+  font-size: .7rem;
+}
+.btn-style{
+  width: 188px;
+
+padding: 15px;
+
+font-size: 01.2rem;
+}
+
+.footer-icons i{
+  border: 3px solid #0078ff;
+  width: 42px;
+padding: 10px;
+}
+.container a{
+  text-decoration: none;
+}
+.contact-us a{
+  text-decoration: none;
+  
+}
+
+.psotion{
+  height: 100vh;
+}
+
+@keyframes typewriter-text {
+    
+      1% {
+        content:'D';
+      }
+      2% {
+        content:'De';
+      }
+      3% {
+        content:'Des';
+      }
+      4% {
+        content:'Desi';
+      }
+      5% {
+        content:'Desig';
+      }
+      6% {
+        content:'Design';
+      }
+      7% {
+        content:'Designe';
+      }
+      8% {
+        content:'Designer';
+      }
+      
+      14% {
+        content:'Designer';
+    }
+    14.5% {
+        content:'Designe';
+      }
+      15% {
+        content:'Design';
+      }
+      15.5% {
+        content:'Desig';
+      }
+      16% {
+        content:'Desi';
+      }
+      16.5% {
+        content:'Des';
+      }
+      17% {
+        content:'De';
+      }
+      17.5% {
+        content:'D';
+      }
+      18% {
+        content:'';
+      }
+      
+      20% {
+        content:'D';
+      }
+      21% {
+        content:'De';
+      }
+      22% {
+        content:'Dev';
+      }
+      23% {
+        content:'Deve';
+      }
+      24% {
+        content:'Devel';
+      }
+      25% {
+        content:'Develo';
+      }
+      26% {
+        content:'Develop';
+      }
+      27% {
+        content:'Develope';
+      }
+      28% {
+        content:'Developer';
+      }
+      
+      34% {
+        content:'Developer';
+      }
+      35.5% {
+        content:'Develope';
+      }
+      36% {
+        content:'Develop';
+      }
+      36.5% {
+        content:'Develo';
+      }
+      37% {
+        content:'Devel';
+      }
+      37.5% {
+        content:'Deve';
+      }
+      38% {
+        content:'Dev';
+      }
+      38.5% {
+        content:'De';
+      }
+      39% {
+        content:'D';
+      }
+      39.5% {
+        content:'';
+      }
+      41% {
+          content:'D';
+      }
+      42% {
+          content:'De';
+      }
+      43% {
+          content:'Des';
+      }
+      44% {
+          content:'Desi';
+      }
+      45% {
+          content:'Desig';
+      }
+      46% {
+          content:'Design';
+      }
+      47%{
+        content:'Designe';
+      }
+      48%{
+        content:'Designer';
+
+      }
+      49%{
+        content:'Designer &';
+        
+      }
+      50%{
+        content:'Designer & W';
+        
+      }
+      51%{
+        content:'Designer & We';
+        
+      }
+      52%{
+        content:'Designer & Web';
+        
+      }
+      53%{
+        content:'Designer & Web D';
+        
+      }
+      54%{
+        content:'Designer & Web De';
+        
+      }
+      55%{
+        content:'Designer & Web Dev';
+        
+      }
+      
+      56%{
+        content:'Designer & Web Deve';
+        
+      }
+      57%{
+        content:'Designer & Web Devel';
+        
+      }
+      58%{
+        content:'Designer & Web Develo';
+        
+      }
+      
+      59%{
+        content:'Designer & Web Develop';
+        
+      }
+      60%{
+        content:'Designer & Web Develope';
+        
+      }
+      61%{
+        content:'Designer & Web Developer';
+        
+      }
+      100% {
+          content:'Designer & Web Developer';
+        
+        }
+}
+
+@keyframes blinking-cursor {
+  from, to { border-color:white }
+  50% { border-color: white }
+}
